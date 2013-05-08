@@ -53,8 +53,19 @@ Mapix CMS
 
 Mapix CMS is built on top of Mapix framework. It consists in many packages :
 
-* `mapix/admin` : administration site
-* `mapix/demo` : demonstration site
+* `mapix/admin` : admin site
+* `mapix/demo` : demo site
 * `mapix/html` : HTML generic templates
 * `mapix/themes` : HTML/CSS templates
+* ...
+
+### Admin site
+
+This site is based on the ExtJS user interface. On startup, admin site search and load `*.app.js` and `*.app.css` files. These files define ExtJS applications that will be used in the administration site, such as file editors or explorers :
+
+* file editor : a file explorer
+* xml editor : a simple xml tree editor
+* text editor : a wrapper for Codepress
+* image editor : a basic image editor
+* package manager : install/uninstall packages
 * ...
