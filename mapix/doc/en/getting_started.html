@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- TODO Rewrite for Mapix 1.0 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/html.xsd">
+	<head>
+		<title>Getting started using Mapix CMS</title>
+		<meta name="description" content="Start creating your website using Mapix CMS"/>
+		<meta name="keywords" content="start,begin,mapix cms,howto,create a website,create a template,file editors,folder editor,package manager"/>
+		<meta name="author" content="IRCF"/>
+	</head>
+	<body>
+		<h2>Creating a new website</h2>
+		<ul>
+			<li>Go to http://localhost, and click on administration site</li>
+			<li>Login using "admin" and "demo". You can now browse your document root using the folder editor.</li>
+			<li>
+				To begin, browse the mapix folder, copy the demo folder (right-click > Copy), and paste it to a new "yoursite" folder inside the root folder (you should NOT paste the "yoursite" folder in the mapix folder).
+			</li>
+			<li>
+				Get back to the root folder, open the controller.xsl file, replace "mapix/demo" by "yoursite", and save file.
+			</li>
+			<li>
+				You can now create/modify/remove HTML pages in the "yoursite" folder, while your site still uses mapix theme, be sure to keep a menu.html and a 404.html page.
+			</li>
+		</ul>
+		<h2>Creating a custom theme</h2>
+		<p>
+			To create your custom theme, go to mapix folder again, and copy the theme dir, and paste it into the "yoursite" folder. Here we assume this theme will only be used by "yoursite". If you plan to reuse your theme for many sites (make a "standard" theme instead of a "custom" theme), then you can paste it in the mapix folder.
+		</p>
+		<p>To be continued...</p>	
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rss xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/rss.xsd">
+	<channel>
+		<title lang="en">News</title>
+		<title lang="fr">Actualités</title>
+		<description lang="en">
+			<p>You can find here the latest news published about Mapix CMS. These news are also available on <a href="http://sourceforge.net/projects/mapix/" target="_blank">Mapix CMS sourceforge.net project site</a>.</p>
+			<p><a href="/news/news.rss" target="_blank">Click here to view the RSS version</a></p>
+		</description>
+		<description lang="fr">
+			<p>Vous retrouvez ici les dernières actualités du projet Mapix CMS. Ces actualités sont extraites du <a href="http://sourceforge.net/projects/mapix/" target="_blank">projet Mapix CMS sur sourceforge.net</a> et sont uniquement publiées en Anglais.</p>
+			<p>Vous pouvez également <a href="/news/news.rss" target="_blank">consulter les actualités au format RSS</a></p>
+		</description>
+		<link>http://mapixcms.org</link>
+		<copyright>Mapix CMS</copyright>
+		<lastBuildDate>04-13-2008</lastBuildDate>
+		<generator>Mapix CMS</generator>
+		<item>
+			<title>Mapix CMS 0.7.5 released</title>
+			<description>Mapix CMS is a full XML content manager system, based on XML standards (XSL, XSD, XForms, RSS...) and written in PHP.<br /><br /><br />This release adds many standard XML schemas (HTML, RSS, XSL, XSD, XForms...) to create compliant XML documents directly with the online XML editor.<br /><br />The XML editor has also been improved to be faster and more easy to use.<br /><br />Many efforts have been done trying to make Mapix PHP4 compatible, but I could not test this myself... Any feed back on this would be appreciated. I will try to downgrade my PHP install to test the PHP4 compatibility feature for the next release.<br /><br />The next release will deal with improving the XML editor (again...) by adding specific controls depending on data types :<br /><br />- dates would be editable using a calendar,<br />- numbers format will be controlled,<br />- URI would use a file selector, based on the folder editor...<br /><br />I will also introduce a user feature (for multiple users to log in the back-office) and maybe a photo gallery template.<br /><br />See you for the next release ! (<a href="http://sourceforge.net/forum/forum.php?forum_id=810967">0 comments</a>)</description>
+			<author>ircf@users.sourceforge.net (IRCF)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=810967</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=810967</guid>
+			<pubDate>2008-04-13</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=810967</comments>
+		</item>
+		<item>
+			<title>Mapix CMS 0.7.4 bug fix</title>
+			<description>Mapix CMS is a simple and light content management system 100% based on XML documents, no database is needed.<br /><br /><br />The first 0.7.4 released contained a bug in the cache function that made cached files blanks and threw an error message in the news page, like those on <a href="http://www.mapixcms.org">http://www.mapixcms.org</a>, <a href="http://demo.mapixcms.org.">http://demo.mapixcms.org.</a><br /><br />I suppose this discouraged people from downloading Mapix CMS because there was no download since this bug !<br /><br />Now don't be afraid, test Mapix CMS and if you are not satisfied, then I'll repay you ...remember it's free ! lol<br /><br />Sorry for this bug and I hope to see you for the next release. (<a href="http://sourceforge.net/forum/forum.php?forum_id=775363">0 comments</a>)</description>
+			<author>ircf@users.sourceforge.net (IRCF)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=775363</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=775363</guid>
+			<pubDate>2008-01-17</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=775363</comments>
+		</item>
+		<item>
+			<title>Mapix CMS 0.7.4 released</title>
+			<description>Mapix CMS is a simple and light content management system 100% based on XML documents, no database is needed.<br /><br />This release provides a full featured online XML editor : open, read and write any XML document in a friendly web form.<br /><br />Simple document types are provided : menu and content.<br /><br />The next release will provide a forum, a photo gallery and also a users file, to handle multiple users to connect to the back-office with different rights.<br /><br />Mapix CMS main features are in place and it will soon be stable and ready for production.<br /><br />See you soon for the next release ! (<a href="http://sourceforge.net/forum/forum.php?forum_id=774930">0 comments</a>)</description>
+			<author>ircf@users.sourceforge.net (IRCF)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=774930</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=774930</guid>
+			<pubDate>2008-01-16</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=774930</comments>
+		</item>
+	</channel>
+</rss>

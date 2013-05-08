@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="doc"
+	version="1.0.0">
+	<name lang="en">Mapix CMS documentation</name>
+	<description lang="en">
+		This package contains the documentation to help you starting with Mapix CMS.
+		You can read this doc locally using a text editor or a browser at http://yourserver/doc.
+		This doc is also available at http://mapixcms.org/doc.
+	</description>
+	<name lang="fr">Documentation Mapix CMS</name>
+	<description lang="fr">
+		Ce paquet contient la documentation pour vous aider à démarrer avec Mapix CMS.
+		Vous pouvez consulter la documentation localement avec un éditeur texte ou en vous connectant sur http://votresite/doc.
+		Cette documentation est également disponible sur http://mapixcms.org/doc.
+	</description>
+	<dependency package="core" version="1.0.0"/>
+</package>

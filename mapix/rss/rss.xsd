@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<xsd:schema version="1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/schema.xsd">
+	<xsd:attribute name="lang" type="xsd:string"/>
+	<xsd:annotation>
+		<xsd:documentation>Version 1.1.0 fixed double quotes in default values. Adjusted image height and width to use a restricted decimal rather than the nonNegativeInteger.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="rss">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This document is used to store and share your news, via your website or using RSS aggregators. A RSS document contains channels.
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Ce type de document est utilisé pour stocker et partager vos actualités (news) sur le web ou en utilisant des aggrégateurs de fils RSS. Un document RSS peut contenir plusieurs fils ou chaînes RSS (channel).
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="channel" type="channel"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="channel">
+		<xsd:sequence>
+			<xsd:element name="title" minOccurs="1" maxOccurs="1" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The name of the channel. It's how people refer to your service. If you have an HTML website that contains the same information as your RSS file, the title of your channel should be the same as the title of your website.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Le nom du fil RSS utilisé pour faire référence à ce service. Si vous avez un site internet qui contient les mêmes informations que votre fil RSS, le titre du fil devrait être le même que celui de votre site internet.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute ref="lang"/>
+					<xsd:sequence>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="link" minOccurs="1" maxOccurs="1" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The URL to the HTML website corresponding to the channel.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						L'adresse web du site internet auquel appartient ce fil.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" minOccurs="1" maxOccurs="1" type="xsd:mixed">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Phrase or sentence describing the channel.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Texte pour décrire le contenu du fil.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute ref="lang"/>
+					<xsd:sequence>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="language" minOccurs="0" maxOccurs="1" default="en-us" type="xsd:lang">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The language the channel is written in. This allows aggregators to group all Italian language sites, for example, on a single page. 
+						A list of allowable values for this element, as provided by Netscape, 
+						is http://blogs.law.harvard.edu/tech/stories/storyReader$15 here. 
+						You may also use http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes values defined by the W3C.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						La langue dans laquelle est écrit le fil RSS. Une liste des valeurs possibles pour cet élément se situe ici :
+						http://blogs.law.harvard.edu/tech/stories/storyReader$15. Vous pouvez aussi utiliser les valeurs définies par le W3C :
+						http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes.
+					</xsd:documentation>
+					<xsd:appinfo>default="en-us"</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="copyright" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Copyright notice for content in the channel.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Droits d'auteur du fil RSS
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="managingEditor" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Email address for person responsible for editorial content.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						E-mail des personnes responsables des actualités.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="webMaster" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Email address for person responsible for technical issues relating to channel.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						E-mail des personnes responsables de la technique du fil RSS.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pubDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The publication date for the content in the channel. For example, the New York Times publishes on a daily basis, the publication date flips once every 24 hours. That's when the pubDate of the channel changes. All date-times in RSS conform to the Date and Time Specification of http://asg.web.cmu.edu/rf/rfc822.html RFC 822, with the exception that the year may be expressed with two characters or four characters (four preferred).
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						La date de publication de ce contenu. Par exemple, le New York Times est publié tous les jours, ce champs est donc en principe modifié toutes les 24 heures. Le format de date respecte le format défini sur http://asg.web.cmu.edu/rf/rfc822.html RFC 822, à ceci près que l'année peut éventuellement être écrite avec 2 chiffres (de préférence 4).
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lastBuildDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The last time the content of the channel changed.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						La dernière fois que le contenu du fil RSS a changé.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="category" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Specify one or more categories that the channel belongs to. Follows the same rules as the item-level http://blogs.law.harvard.edu/tech/rss#ltcategorygtSubelementOfLtitemgt" category element. More http://blogs.law.harvard.edu/tech/rss#syndic8 info.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Indique la ou les catégories auxquelles appartient ce contenu, voir http://blogs.law.harvard.edu/tech/rss#ltcategorygtSubelementOfLtitemgt" et http://blogs.law.harvard.edu/tech/rss#syndic8.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="generator" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A string indicating the program used to generate the channel.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Une chaine de caractères indiquant avec quel programme est généré le fil RSS.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="docs" default="http://blogs.law.harvard.edu/tech/rss">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A URL that points to the documentation for the format used in the RSS file. It's probably a pointer to this page. It's for people who might stumble across an RSS file on a Web server 25 years from now and wonder what it is.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Une URL qui pointe vers la documentation du format utilisé pour le fil RSS.
+					</xsd:documentation>
+					<xsd:appinfo>
+						default="http://blogs.law.harvard.edu/tech/rss"
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="cloud">
+				<xsd:complexType>
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							Allows processes to register with a cloud to be notified of updates to the channel, implementing a lightweight publish-subscribe protocol for RSS feeds. More info http://blogs.law.harvard.edu/tech/rss#ltcloudgtSubelementOfLtchannelgt here.
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:attribute name="domain"/>
+					<xsd:attribute name="port"/>
+					<xsd:attribute name="path"/>
+					<xsd:attribute name="registerProcedure"/>
+					<xsd:attribute name="protocol">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="xml-rpc"/>
+								<xsd:enumeration value="soap"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ttl">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						ttl stands for time to live. It's a number of minutes that indicates how long a channel can be cached before refreshing from the source. 
+						More info http://blogs.law.harvard.edu/tech/rss#ltttlgtSubelementOfLtchannelgt here.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						ttl est pour la "durée de vie". C'est un nombre de minutes qui indique combien de temps le fil RSS peut être stocké en cache avant d'être rechargé depuis le source. 
+						Plus d'infos ici : http://blogs.law.harvard.edu/tech/rss#ltttlgtSubelementOfLtchannelgt.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="image">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Specifies a GIF, JPEG or PNG image that can be displayed with the channel. More info http://blogs.law.harvard.edu/tech/rss#ltimagegtSubelementOfLtchannelgt here.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Permet d'ajouter une image (GIF, JPEG ou PNG) qui peut être affichée avec le fil RSS. Plus d'infos ici : http://blogs.law.harvard.edu/tech/rss#ltimagegtSubelementOfLtchannelgt.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="url" minOccurs="1" maxOccurs="1" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									The URL of a GIF, JPEG or PNG image that represents the channel.
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									L'URL de l'image (GIF, JPEG ou PNG) qui illustre le fil RSS.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="title" minOccurs="1" maxOccurs="1" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									Describes the image, it's used in the ALT attribute of the HTML img tag when the channel is rendered in HTML.
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									Déscription de l'image. Il s'agit habituellement d'un attribut "alt" dans la balise HTML "img" quand le fil RSS est rendu en HTML.
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:attribute ref="lang"/>
+								<xsd:sequence>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="link" minOccurs="1" maxOccurs="1" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									The URL of the site, when the channel is rendered, the image is a link to the site.
+									(Note, in practice the image title and link should have the same value as the channel's title and link.)
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									L'URL du site vers lequel pointe l'image quand le fil RSS est affiché.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="width" default="88">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:maxInclusive value="144"/>
+									<xsd:minInclusive value="0"/>
+									<xsd:fractionDigits value="0"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="height" default="31">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:maxInclusive value="400"/>
+									<xsd:minInclusive value="0"/>
+									<xsd:fractionDigits value="0"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="description" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									Contains text that is included in the TITLE attribute of the link formed around 
+									the image in the HTML rendering.
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									Contient le texte qui est inclus dans l'attribut "titre" du lien formé 
+									autour de l'image dans le rendu HTML.
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:attribute ref="lang"/>
+								<xsd:sequence>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="rating">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The http://www.w3.org/PICS/ PICS rating for the channel.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						The http://www.w3.org/PICS/ PICS rating for the channel.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="textInput" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Specifies a text input box that can be displayed with the channel. 
+						More info http://blogs.law.harvard.edu/tech/rss#lttextinputgtSubelementOfLtchannelgt here.
+						The purpose of the textInput element is something of a mystery. 
+						You can use it to specify a search engine box. Or to allow a reader to provide feedback. 
+						Most aggregators ignore it.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="title" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									The label of the Submit button in the text input area.
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									Le libellé du boutton "submit" dans la zone de texte.
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:attribute ref="lang"/>
+								<xsd:sequence>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="description" type="xsd:mixed">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									Explains the text input area.
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									Décrit la zone de texte.
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:attribute ref="lang"/>
+								<xsd:sequence>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="name" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									The name of the text object in the text input area.
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									Le nom de l'objet "texte" dans la zone de texte.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="link" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									The URL of the CGI script that processes text input requests.
+								</xsd:documentation>
+								<xsd:documentation xml:lang="fr">
+									L'URL du script CGI qui effectue les requêtes "text input".
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="skipHours">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A hint for aggregators telling them which hours they can skip. 
+						More info http://blogs.law.harvard.edu/tech/skipHoursDays#skiphours here.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="skipDays">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A hint for aggregators telling them which days they can skip. 
+						More info http://blogs.law.harvard.edu/tech/skipHoursDays#skipdays here.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="item" type="item" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" default="2.0"/>
+	</xsd:complexType>
+	<!-- End of Channel definition -->
+	<!-- Start Item definition -->
+	<xsd:complexType name="item">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A channel may contain any number of items. 
+				An item may represent a "story" -- much like a story in a newspaper or magazine; 
+				if so its description is a synopsis of the story, and the link points to the full story. 
+				An item may also be complete in itself, if so, the description contains the text 
+				(entity-encoded HTML is allowed), and the link and title may be omitted. 
+				All elements of an item are optional, however at least one of title or description must be present.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="title" type="xsd:string"/>
+			<xsd:element name="link" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The URL of the item.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						L'URL de l'élément.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute ref="lang"/>
+					<xsd:sequence>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="description" type="xsd:mixed">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The item synopsis.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Le résumé de l'émément.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute ref="lang"/>
+					<xsd:sequence>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="author" minOccurs="0" maxOccurs="1" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						It's the email address of the author of the item. 
+						For newspapers and magazines syndicating via RSS, the author is the person who wrote the article 
+						that the item describes. For collaborative weblogs, the author of the item might be different 
+						from the managing editor or webmaster. For a weblog authored by a single individual it would make 
+						sense to omit the author element.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						L'adresse E-mail de l'auteur.
+						Ce champs est facultatif si tous les contenus sont rédigés par la même personne.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="category" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:attribute name="domain" use="optional">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The value of the element is a forward-slash-separated string that 
+								identifies a hierarchic location in the indicated taxonomy. 
+								Processors may establish conventions for the interpretation of categories.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="comments" minOccurs="0" maxOccurs="1" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						If present, it is the url of the comments page for the item.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="enclosure" minOccurs="0" maxOccurs="1" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Describes a media object that is attached to the item.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Décrit un fichier multimédia attaché à un article RSS.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="url" use="required" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Where the enclosure is located
+							</xsd:documentation>
+							<xsd:documentation xml:lang="fr">
+								Où l'enclosure est situé.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="length" use="required" type="xsd:integer">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								How big it is in bytes.
+							</xsd:documentation>
+							<xsd:documentation xml:lang="fr">
+								Indique la taille du fichier (en octets)
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="type" use="required" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								What its type is, a standard MIME type.
+							</xsd:documentation>
+							<xsd:documentation xml:lang="fr">
+									Précise le type standard MIME.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="guid" minOccurs="0" maxOccurs="1" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A string that uniquely identifies the item. There are no rules for the syntax of a guid. 
+						Aggregators must view them as a string. It's up to the source of the feed to establish the 
+						uniqueness of the string.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pubDate" minOccurs="0" maxOccurs="1" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Indicates when the item was published.
+					</xsd:documentation>
+					<xsd:documentation xml:lang="fr">
+						Indique quand l'élément a été publié.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="source" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The RSS channel that the item came from. The purpose of this element is to propagate 
+						credit for links, to publicize the sources of news items. 
+						It can be used in the Post command of an aggregator. It should be generated automatically when 
+						forwarding an item from an aggregator to a weblog authoring tool.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="url" use="required" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								links to the XMLization of the source
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,68 @@
+/**
+ * Mapix admin layout
+ * @author IRCF
+ */
+
+/* Elements */
+html{
+	height:100%;
+}
+body{
+	margin:0;
+	padding:0;
+	font:12px arial,sans;
+	height:100%;
+}
+a{
+	color:inherit;
+}
+
+/* Header */
+div#header{
+	height:67px;
+	background:#406c6d url(images/header.jpg) no-repeat;
+	color:#fff;
+}
+div#header div.x-panel-body{
+	background:none;
+	border:none;
+}
+div#header a{
+	text-decoration:none;
+	border-bottom:1px dotted #fff;
+}
+div#header h1{
+	float:left;
+	width:120px;
+	height:42px;
+	background:url(images/logo.png) no-repeat;
+	margin:15px 15px 0 15px;
+	padding:0;
+}
+div#header h1 span{
+	display:none;
+}
+div#header h2{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	margin:35px 40px 0 20px;
+	padding:0;
+}
+div#header div.infos{
+	float:right;
+	text-align:right;
+	margin:0 20px 0 0;
+}
+div#header div.infos p,
+div#header div.infos ul{
+	padding:0;
+	margin:5px 0 0 0;
+}
+div#header div.infos span{
+	margin:0 5px;
+}
+div#header ul#lang li{
+	display:inline;
+	margin:0 0 0 10px;
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/html.xsd">
+	<head>
+		<title>Roadmap : features and ideas for Mapix CMS future versions</title>
+		<meta name="description" content="This file describes features that may be added to Mapix CMS in the future."/>
+		<meta name="keywords" content="roadmap,todo,features,version,milestone,ideas"/>
+		<meta name="author" content="IRCF"/>
+	</head>
+	<body>
+		<p>
+			This document describes features that may be added to Mapix CMS in the future.<br/>
+			Features or priority may change. If you have any suggestion, email us at gpl@ircf.fr
+		</p>
+		<h2>Version number</h2>
+		<p>Version number = (Milestone).(Major feature).(Minor feature or Revision number)</p>
+		<p>Current version is 1.0.0</p>
+		<h2>Features legend</h2>
+		<p>
+			+ : Under development<br/>
+			- : Will be developed
+		</p>
+		<h2>Milestone 1 (stable version)</h2>
+		<ul>
+			<li>+ All : Debug XSL Templates to remove ALL namespaces from XHTML output (except the default for the XHTML document)</li>			
+			<li>+ Admin : Rewrite back office interface using Mootols and Ajax</li>
+			<li>+ Admin : Implement an OpenID simple consumer</li>
+			<li>+ XML Editor : Implement specific controls for attributes/elements depending on their xsd:type
+				<ul>
+					<li>+ Files</li>
+					<li>- Enumeration</li>
+				</ul>
+			</li>
+			<li>+ Folder Editor :
+				<ul>
+					<li>+ Sort files on list view</li>
+					<li>+ Implement lock/unlock files</li>
+				</ul>
+			</li>
+			<li>- Admin : Auto check for upgrades</li>
+			<li>- Core : Add the page status attribute for handling any http status code</li>
+			<li>- Core : Handle XML parse errors properly (eventually propose a rollback on the last modified file ?)</li>			
+			<li>- Common : Complete xforms specifications template</li>
+			<li>- Common : Implement a database access service</li>			
+			<li>- Packages :
+				<ul>
+					<li>- news</li>
+					<li>- blog</li>
+					<li>- forum</li>
+					<li>- e-commerce</li>
+				</ul>
+			</li>
+		<h2>Milestone 2 (mature version)</h2>
+		<ul>
+			<li>Mapix 2 will use a new mechanism : The Mapix map file will be replaced by the W3C standard XML Pipeline Language (XPL).</li>
+			<li>The main map file will be index.xpl, located at the document root.</li>
+			<li>Each HTTP request will instianciate the XPL Parser Service (/services/xpl.php) and use the nearer index.xpl file from the URI.</li>
+			<li>Each service will be considered as an XPL Process (xpl,xsl,folder,text,xml,image...)</li>
+			<li>There will no longer be a "core class", but only HTTP Services located in the /services folder</li>
+			<li>The XPL will decentralize Mapix CMS control and will provide much more freedom input/ouput controls and formats.</li>
+		</ul>
+		<h2>Long term ideas</h2>
+		<p>Mapix core could then eventually be translated into multiple technologies to develop its portability :</p>
+		<ul>
+			<li>Implement mapix for ASP / ASP.NET</li>
+			<li>Implement mapix client version with Javascript (full Ajax navigation)</li>
+		</ul>
+		<p>All sites developed using Mapix CMS would in principle be compatible with such versions.</p>
+	</body>
+</html>

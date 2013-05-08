@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!-- TODO Rewrite for Mapix 1.0 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/html.xsd">
+	<head>
+		<title>Getting started using Mapix CMS</title>
+		<meta name="description" content="Start creating your website using Mapix CMS"/>
+		<meta name="keywords" content="start,begin,mapix cms,howto,create a website,create a template,file editors,folder editor,package manager"/>
+		<meta name="author" content="IRCF"/>
+	</head>
+	<body>
+		<h2>Creating a new website</h2>
+		<p>Mapix distribution contains a demo site and a back-office (administration site)</p>
+		<ul>
+			<li>Go to http://localhost, and click on administration site</li>
+			<li>Login using "admin" and "demo". You can now browse your document root using the folder editor.</li>
+			<li>
+				To begin, copy and paste the demo folder to a new "yoursite" folder : to do that, just right-click on the demo folder
+				and left-click on the "copy" menu, fill in the new folder name ("yoursite") and submit.
+			</li>
+			<li>
+				Then double-click on the index.map file : this will open the main map file in the XML editor.
+				Just change the location of your site map file : replace "demo/index.map" by "yoursite/index.map" and save.
+			</li>
+			<li>
+				Now double-click on the "yoursite" folder and start creating or editing your site files :
+				you already got a content and a images folder, and you may want to create other folders, like templates, css, js...
+				But before doing this, go to the content folder and try to edit some content files, like content/home.xml.
+			</li>
+		</ul>
+		<h2>Creating stylesheets and templates</h2>
+		<p>
+			So now you want to create your own stylesheets or templates, right ?
+			Then create a css folder and a create a new text file called "common.css".
+			From this point, your site should appear "naked", why ? Well because you have overriden
+			a file located in the common folder (precisely /common/css/common.css)
+			and this file is used by the default template (/common/templates/content.xsl) to style your page.
+			The same thing happens if you create a templates/content.xsl in yoursite folder : mapix will ne longer use the /common/templates/content.xsl template.
+			Before creating a new file, you should think whether this file will be exclusive to your site
+			or whether this file might be shared with other sites. If your file is specific to your site, then go on and create it in yoursite,
+			else you can also create new files and folders in the common folder.
+		</p>
+		<h2>File Editors</h2>
+		<p>
+			Mapix admin site is designed to edit different kind of files : folder, image, xml, text, svg...
+			When you double-click on a file, the matching editor will automatically be used to open the file.
+			XML files are opened using the XML editor, that aims to simplify document edition.
+			You can switch to the text editor (when the document is opened in the xml editor, just click on the text editor menu)
+			In the XML editor, right-click on a node to display the contextual menu.
+			Templates are stored in the templates dir and use the XSL language.
+			XSL files are also opened with the XML editor, but it is recommended to use the text editor instead
+			(or else, developpers comments in templates could be lost).
+			Be careful when you modify a document, not to loose information (keep the backup option checked)
+		</p>
+		<h2>Folder Editor</h2>
+		<p>
+			The folder editor has a particular place in admin site, because you will spend a lot of time using it.
+			You can access the folder editor menu using right-click on a specific file.
+			Folder editor allows you to do a lot of harmful operations : create, copy, move, delete, rename, upload, zip/unzip, save/restore, lock/unlock...
+			Some of these operations (unlike in file editors) cannot be reversed : for example, you won't be able to restore a deleted file if you haven't saved it before.
+			Consider using the Save menu from time to time to keep a copy of your files or folders.
+		</p>
+		<h2>Package manager</h2>
+		<p>
+			The package manager allows you to update, upgrade, install or uninstall Mapix CMS packages anywhere under your document root.
+			These operations also cannot be reversed (unless you used the Save menu before).
+			It is strongly recommended to upgrade a package which version is marked stable.
+			Non-stable packages should not be used in production environnements.
+		</p>
+		<p>A package may usually be installed in three different places :</p>
+		<ul>
+			<li><strong>the document root</strong> : only mapix core, common and websites should be installed here, Mapix framework and CMS can be fully upgraded from the package manager</li>
+			<li><strong>the common folder</strong> : install here packages that may be shared between different sites</li>
+			<li><strong>a website folder</strong> : install here packages that will be used only in this website (this may also concern admin site packages)</li>
+		</ul>
+		<h2>Now what ?</h2>
+		<p>More complete tutorials and screencasts will soon be available on http://mapixcms.org to explain :</p>
+		<ul>
+			<li>How to create and modify a website from A to Z, using Mapix CMS</li>
+			<li>How to create your own package and your own repository (yes you can !)</li>
+		</ul>
+		<p>If you are stuck and you can't wait : contact-us at gpl@ircf.fr, we'll try to help you.</p>
+	</body>
+</html>

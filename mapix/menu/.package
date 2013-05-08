@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="moomenu"
+	version="1.0.0"
+	defaultInstall="mapix">
+	<name lang="en">MooMenu</name>
+	<description lang="en">
+		Generates tree menus with javascript interactions, based on Mootools. 
+	</description>
+	<name lang="fr">MooMenu</name>
+	<description lang="fr">
+		Permet de créer des menus arborescents avec des interactions javascript, basé sur Mootools.
+	</description>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="core"
+	version="1.0.0"
+	install="modules">
+	<name lang="en">Mapix CMS core</name>
+	<description lang="en">
+		This package contains the XRT (XML Request Transform) parser and XML/HTTP utilities required by Mapix CMS.
+		Do not remove this package unless you want to completely remove Mapix CMS from your website.
+		Note that if your website depends on Mapix core (if you use index.xsl files),
+		it won't work anymore, so make sure your website is really standalone before removing this package.
+	</description>
+	<name lang="fr">Noyau de Mapix CMS</name>
+	<description lang="fr">
+		Ce paquet contient l'interpréteur XRT (XML Request Transform) et des utilitaires XML/HTTP nécessaires au fonctionnement de Mapix CMS.
+		Ne supprimez pas ce paquet sauf si vous souhaitez désinstaller complètement Mapix CMS de votre site web.
+		Si votre site dépend du noyau de Mapix CMS (si vous utilisez des fichiers index.xsl),
+		il ne fonctionnera plus, assurez-vous que votre site web soit réellement autonome avant de supprimer ce paquet.
+	</description>
+</package>

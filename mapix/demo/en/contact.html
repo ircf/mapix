@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/01/xforms" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/html.xsd">
+	<head>
+		<title>Contact us</title>
+		<xf:model>
+			<xf:instance xmlns="">
+				<data>
+					<Name/>
+					<Address/>
+					<Email/>
+					<Message/>
+				</data>
+			</xf:instance>
+			<xf:submission id="form1" method="get" action="en/contact/"/>
+		</xf:model>
+	</head>
+	<body>
+		<p>Please fill in the form below to contact us.</p>
+		<xf:input ref="Name">
+			<xf:label lang="en">Name</xf:label>
+		</xf:input>
+		<xf:input ref="Address">
+			<xf:label lang="en">Address</xf:label>
+		</xf:input>
+		<xf:input ref="Email">
+			<xf:label lang="en">Email</xf:label>
+		</xf:input>
+		<xf:textarea ref="Message">
+			<xf:label lang="en">Message</xf:label>
+		</xf:textarea>
+		<xf:submit submission="form1">
+			<xf:label lang="en">Send this form</xf:label>
+		</xf:submit>
+	</body>
+</html>

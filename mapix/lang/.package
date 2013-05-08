@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="lang"
+	version="1.0.0"
+	defaultInstall="mapix">
+	<name lang="en">Multiple languages support</name>
+	<description lang="en">
+		Handles localization and provides language functions and menus.
+	</description>
+	<name lang="fr">Support multi-langues</name>
+	<description lang="fr">
+		Permet la localisation et fourni des fonctions de traduction et un menu de sélection de la langue.
+	</description>
+</package>

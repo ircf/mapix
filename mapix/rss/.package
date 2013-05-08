@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="rss"
+	version="1.0.0"
+	defaultInstall="/modules">
+	<name lang="en">RSS</name>
+	<description lang="en">
+		Generates RSS documents from your web pages and other way round.
+	</description>
+	<name lang="fr">RSS</name>
+	<description lang="fr">
+		Permet de générer des flux RSS depuis vos pages web et inversement.
+	</description>
+</package>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="xform"
+	version="1.0.0"
+	defaultInstall="/modules">
+	<name lang="en">XForm</name>
+	<description lang="en">
+		XForm schema and templates.
+	</description>
+	<name lang="fr">XForm</name>
+	<description lang="fr">
+		Schema et gabarits XForm.
+	</description>
+</package>

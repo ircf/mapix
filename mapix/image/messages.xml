@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- Image editor messages -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<message id="imageEditor" lang="en">Image editor</message>
+	<message id="imageEditor" lang="fr">Editeur d'images</message>
+	<message id="rotateImage" lang="en">Rotate image</message>
+	<message id="rotateImage" lang="fr">Pivoter l'image</message>
+	<message id="cropImage" lang="en">Crop image</message>
+	<message id="cropImage" lang="fr">Recadrer l'image</message>
+	<message id="left" lang="en">Left</message>
+	<message id="left" lang="fr">Gauche</message>
+	<message id="top" lang="en">Top</message>
+	<message id="top" lang="fr">Haut</message>
+	<message id="width" lang="en">Width</message>
+	<message id="width" lang="fr">Largeur</message>
+	<message id="height" lang="en">Height</message>
+	<message id="height" lang="fr">Hauteur</message>
+	<message id="resizeImage" lang="en">Resize image</message>
+	<message id="resizeImage" lang="fr">Redimensionner l'image</message>
+	<message id="imageFileError" lang="en">This file is not a valid image. Try to open it with the text editor.</message>
+	<message id="imageFileError" lang="fr">Ce fichier n'est pas une image. Essayez de l'ouvrir avec l'éditeur texte.</message>
+</messages>

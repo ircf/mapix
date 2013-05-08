@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- This file contains messages displayed by templates and services for both back and front offices -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<message id="header" lang="fr">
+		<h1><span>Mapix CMS</span></h1>
+		<p>Gestionnaire de contenu simple basé sur XML</p>
+	</message>
+	<message id="footer" lang="fr">
+		Mapix est un projet développé et maintenu par <a href="http://ircf.fr">IRCF</a>, sous la licence GNU General Public License<br/>
+		Si vous êtes intéressé par ce projet, n'hésitez pas à <a href="mailto:gpl@ircf.fr">nous contacter</a>.
+	</message>
+	<message id="sendFormOk" lang="fr">
+		Le formulaire nous a été envoyé par mail.
+	</message>
+	<message id="sendFormError" lang="fr">
+		Le formulaire n'a pas pu être envoyé.
+	</message>
+</messages>

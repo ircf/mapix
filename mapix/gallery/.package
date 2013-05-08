@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="gallery"
+	version="1.0.0"
+	defaultInstall="/modules">
+	<name lang="en">Gallery</name>
+	<description lang="en">
+		Generates multimedia galleries in your web pages.
+	</description>
+	<name lang="fr">Galerie multimédia</name>
+	<description lang="fr">
+		Créer des galeries multimédias sur vos pages web.
+	</description>
+</package>

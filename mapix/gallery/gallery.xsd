@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!-- Mapix Media Gallery schema definition -->
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/schema.xsd">
+	<!-- Gallery attributes -->
+	<xsd:attribute name="url" type="xsd:string" use="required"/>
+	<xsd:attribute name="type" use="required">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xs:enumeration value="image"/>
+				<xs:enumeration value="video"/>
+				<xs:enumeration value="audio"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="lang" type="xsd:string"/>
+	<!-- Gallery elements -->
+	<xsd:element name="title" minOccurs="1" maxOccurs="1" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The title for this gallery or media
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Le titre de cette galerie ou media
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="lang"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="text" minOccurs="1" maxOccurs="1" type="xsd:mixed">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The text for this gallery or media
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Le texte de cette galerie ou media
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="lang"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="gallery" minOccurs="1" maxOccurs="1">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A gallery references media files such as images, video or audio clips
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Une galerie référence des fichiers multimédia : images, clips audios ou vidéos
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="title"/>
+				<xsd:element ref="text"/>
+				<xsd:element ref="media"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="media" minOccurs="1" maxOccurs="unbounded" class="folded">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A media file is represented by its type (image, video or audio) and URL
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Un fichier multimédia est représenté par son type (image,audio ou video) et son URL
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="type"/>
+			<xsd:attribute ref="url"/>
+			<xsd:sequence>
+				<xsd:element ref="title"/>
+				<xsd:element ref="text"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

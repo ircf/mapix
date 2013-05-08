@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- Global messages displayed in the back office -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<!-- Package manager -->
+	<message id="packageManager" lang="en">Package manager</message>
+	<message id="packageManager" lang="fr">Gestionnaire de paquets</message>
+	<message id="packageServerUpdateError" lang="en">Could not connect to the Mapix CMS package repository. Check the package manager configuration in the /admin/index.map file or try to connect later.</message>
+	<message id="packageServerUpdateError" lang="fr">Impossible de se connecter au dépôt de paquets Mapix CMS. Vérifiez la configuration du gestionnaire de paquets dans le fichier /admin/index.map ou réessayez plus tard.</message>
+	<message id="packageUpdateError" lang="en">Could not read your local package configuration. One or many package descriptor are not XML documents.</message>
+	<message id="packageUpdateError" lang="fr">Impossible de lire votre configuration de paquets. Un ou plusieurs descripteurs ne sont pas des documents XML.</message>
+	<message id="packageInstalled" lang="en">Package(s) installed or upgraded successfully.</message>
+	<message id="packageInstalled" lang="fr">Paquet(s) installé(s) ou mis à jour avec succès.</message>
+	<message id="packageInstallError" lang="en">One ore many packages could not be installed or upgraded. Ensure that the package install folder is writable or try again later.</message>
+	<message id="packageInstallError" lang="fr">Un ou plusieurs paquets n'ont pas pu être installés ou mis à jour. Assurez-vous que le dossier d'installation des paquets soit accessible en écriture ou réessayez plus tard.</message>
+	<message id="packageUninstalled" lang="en">Package(s) uninstalled successfully.</message>
+	<message id="packageUninstalled" lang="fr">Paquet(s) désinstallé(s) avec succès.</message>
+	<message id="packageUninstallError" lang="en">One or many packages could not be uninstalled. Ensure your install folder is writable and try again.</message>
+	<message id="packageUninstallError" lang="fr">Un ou plusieurs paquets n'ont pas pu être désinstallés. Assurez-vous que le dossier d'installation des paquets soit accessible en écriture et réessayez.</message>
+	<message id="dataDownloaded" lang="en">KB will be downloaded from the repository and installed on the server.</message>
+	<message id="dataDownloaded" lang="fr">Ko seront téléchargés depuis le dépôt et installés sur le serveur.</message>
+	<message id="dataRemoved" lang="en">Ko will be removed from the server.</message>
+	<message id="dataRemoved" lang="fr">Ko seront supprimés du serveur.</message>
+	<message id="packageSubmit" lang="en">This operation might take a moment and should not be interrupted. Are you sure ?</message>
+	<message id="packageSubmit" lang="fr">Cette opération peut prendre un certain temps et ne doit pas être interrompue. Etes-vous sûr ?</message>
+	<message id="size" lang="en">Size</message>
+	<message id="size" lang="fr">Taille</message>
+	<message id="upgrade" lang="en">Upgrade</message>
+	<message id="upgrade" lang="fr">Mettre à jour</message>
+	<message id="install" lang="en">Install</message>
+	<message id="install" lang="fr">Installer</message>
+	<message id="uninstall" lang="en">Uninstall</message>
+	<message id="uninstall" lang="fr">Désinstaller</message>
+	<message id="show" lang="en">Show</message>
+	<message id="show" lang="fr">Afficher</message>
+	<message id="installedPackages" lang="en">Installed packages</message>
+	<message id="installedPackages" lang="fr">Paquets installés</message>
+	<message id="upgrades" lang="en">Upgrades</message>
+	<message id="upgrades" lang="fr">Mises à jour</message>
+	<message id="allPackages" lang="en">All packages</message>
+	<message id="allPackages" lang="fr">Tous les paquets</message>
+	<message id="repository" lang="en">Repository</message>
+	<message id="repository" lang="fr">Dépôt</message>
+	<message id="packageList" lang="en">Package list</message>
+	<message id="packageList" lang="fr">Liste des paquets</message>
+	<message id="installedIn" lang="en">installed in</message>
+	<message id="installedIn" lang="fr">installé dans</message>
+</messages>

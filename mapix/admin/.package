@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="admin"
+	version="1.0.0"
+	install="sites">
+	<name lang="en">Mapix CMS admin site</name>
+	<description lang="en">
+		This package contains the administration site (back office) that allows users to modify their websites online.
+	</description>
+	<name lang="fr">Site d'administration de Mapix CMS</name>
+	<description lang="fr">
+		Ce paquet contient le site d'administration (back office) qui permet aux utilisateurs de modifier leur sites web en ligne.
+	</description>
+	<dependency package="core" version="1.0.0"/>
+</package>

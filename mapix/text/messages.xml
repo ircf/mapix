@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- Global messages displayed in the back office -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<!-- Text editor -->	
+	<message id="textEditor" lang="en">Text file editor</message>
+	<message id="textEditor" lang="fr">Editeur de fichiers textes</message>
+</messages>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/html.xsd">
+	<head>
+		<title>Roadmap : features and ideas for Mapix CMS future versions</title>
+		<meta name="description" content="This file describes features that may be added to Mapix CMS in the future."/>
+		<meta name="keywords" content="roadmap,todo,features,version,milestone,ideas"/>
+		<meta name="author" content="IRCF"/>
+	</head>
+	<body>
+		<p>
+			This document describes features that may be added to Mapix CMS in the future.<br/>
+			Features or priority may change. If you have any suggestion, email us at gpl@ircf.fr
+		</p>
+		<h2>Version number</h2>
+		<p>Version number = (Milestone).(Major feature).(Minor feature or Revision number)</p>
+		<p>Current version is 1.0.0</p>
+		<h2>Features legend</h2>
+		<p>
+			+ : Under development<br/>
+			- : Will be developed
+		</p>
+		<h2>Milestone 1 (stable version)</h2>
+		<ul>
+			<li>+ all : Debug XSL Templates to remove ALL namespaces from XHTML output (except default for XHTML document)</li>
+			<li>+ admin : Rewrite back office interface using ExtJS and Ajax
+				<ul>
+					<li>- users :
+						<ul>
+							<li>Reimplement</li>
+							<li>Implement OpenID login</li>
+						</ul>
+					</li>
+					<li>- xml :
+						<ul>
+							<li>Reimplement</li>
+							<li>Implement specific controls depending on xsd:type : Files, Enumeration</
+						</ul>
+					</li>
+					<li>+ file : Reimplement</li>
+					<li>- package : Reimplement</li>
+				</ul>
+			</li>
+			<li>- xforms : Complete xforms specifications template</li>
+			<li>- sdl : Implement a database/data source access service</li>
+			<li>- news/blog/forum : Develop functions (use sdl or rss to store data)</li>
+			<li>- e-commerce</li>
+		</ul>
+		<h2>Milestone 2 (mature version)</h2>
+		<p>No big changes are planned for now. If you have </p>
+		<h2>Long term ideas</h2>
+		<p>Mapix core could then eventually be translated into multiple technologies to develop its portability :</p>
+		<ul>
+			<li>Implement mapix for ASP / ASP.NET</li>
+			<li>Implement mapix client version with Javascript (full Ajax navigation)</li>
+		</ul>
+		<p>All sites developed using Mapix CMS would in principle be compatible with such versions.</p>
+	</body>
+</html>

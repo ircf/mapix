@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Mapix admin map -->
+<mapix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/mapix.xsd">
+	<template url="themes/default.theme/template.xsl">
+		<input type="session" name="lang" global="true"/>
+		<input type="session" name="user" global="true"/>
+		<content url="messages.xml" global="true"/>
+		<page>
+		</page>
+		<page url="header">
+			<content url="http://mapixcms.org/repository/" cache="60"/>
+			<content url="../../.core/.package"/>
+			<content url=".package"/>
+		</page>
+	</template>
+</mapix>

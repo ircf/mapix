@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- This file contains the languages available in the website -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<message id="en" lang="en">English</message>
+	<message id="en" lang="fr">Anglais</message>
+	<message id="fr" lang="en">French</message>
+	<message id="fr" lang="fr">Français</message>
+</messages>

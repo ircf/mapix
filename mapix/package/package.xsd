@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!-- Mapix Package schema definition -->
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/schema.xsd">
+	<!-- Package attributes -->
+	<xsd:attribute name="url" type="xsd:string"/>
+	<xsd:attribute name="lang" type="xsd:lang"/>
+	<!-- Package elements -->
+	<xsd:element name="package" minOccurs="1" maxOccurs="1" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This document defines a Mapix CMS package : a package is a .tar.gz archive that can be extracted anywhere in your mapix install (generally in common or your_site folder).
+				The package descriptor is located in the folder where the package was installed. This file should not be removed or modified in order to be able to upgrade or uninstall this package properly using the package manager from the admin site.
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Ce document définit un paquet utilisé dans Mapix CMS:: un paquet est une archive au format .tar.gz qui peut être extraite dans n'importe quel dossier (en principe dans le dossier common ou votre_site).
+				Lors de l'installation du paquet, ce descripteur est copié dans le dossier d'installation. Ce fichier ne doit pas être modifié ou supprimé afin de pouvoir mettre à jour ou désinstaller le paquet par la suite, en utilisant le gestionnaire de paquets du site d'administration.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="name"/>
+				<xsd:element ref="description"/>
+				<xsd:element ref="dependency"/>
+				<xsd:element ref="file"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="name" minOccurs="1" maxOccurs="unbounded" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The full name of the package
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Le nom complet du paquet
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="lang"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="description" minOccurs="1" maxOccurs="unbounded" type="xsd:mixed">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Text to describe the content and/or features of this package
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Texte pour décrire le contenu et/ou le fonctionnement du paquet
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="lang"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="dependency" minOccurs="1" maxOccurs="unbounded" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+			 	File or folder (usually another package) url required to install this package.
+				A package dependency is represented by using the package descriptor url :
+				for instance, any package should always have a dependency to url ".package.core", i.e any package would depend on the core package.
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Fichier ou dossier (en principe un autre paquet) requis pour installer ce paquet.
+				Pour indiquer qu'un paquet dépend d'un autre, il suffit d'indique l'url du descripteur du paquet :
+				par exemple, n'importe quel paquet devrait avoir une dépendance vis à vis de l'url ".package.core", i.e. chaque paquet nécéssite l'installation du paquet core (noyau).
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="url"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="file" minOccurs="1" maxOccurs="unbounded" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A file or folder contained in this package. This file will be copied/removed when the package is installed/uninstalled.
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Un fichier ou dossier contenu dans ce paquet. Ce fichier sera copié/supprimé lors de l'installation/la désinstallation du paquet.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="url"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

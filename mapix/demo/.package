@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="demo"
+	version="1.0.0"
+	install="sites"
+	size="268000">
+	<name lang="en">Mapix CMS demo site</name>
+	<description lang="en">
+		This package contains the demo site (front office) with several pages to help you starting a new site :
+		home, contact form, photo gallery... You can navigate through this demo at http://yourserver/demo.
+		This demo is also available at http://demo.mapixcms.org.
+	</description>
+	<name lang="fr">Site de démonstration de Mapix CMS</name>
+	<description lang="fr">
+		Ce paquet contient le site de démonstration (front office) avec quelques pages pour vous aider à créer un nouveau site :
+		accueil, formulaire de contact, galerie photos... Vous pouvez naviguer sur ce site sur http://votresite/demo.
+		Ce site est également disponible sur http://demo.mapixcms.org.
+	</description>
+	<dependency package="core" version="1.0.0"/>
+</package>

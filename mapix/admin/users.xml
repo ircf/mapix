@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- Mapix default Users file -->
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/users.xsd">
+	<group name="administrator">
+		<user name="admin" password="demo" openid="http://demo.mapixcms.openid.org"/>
+		<permission url="*" read="true" write="true"/>
+	</group>
+	<group name="editor">
+		<user name="editor" password="demo"/>
+		<permission url="/content*" read="true" write="true"/>
+	</group>
+	<group name="designer">
+		<user name="designer" password="demo"/>
+		<permission url="/css*" read="true" write="true"/>
+		<permission url="/images*" read="true" write="true"/>
+		<permission url="/templates*" read="true" write="true"/>
+	</group>
+</users>

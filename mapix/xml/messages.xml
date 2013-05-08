@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- Global messages displayed in the back office -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<!-- Xml editor -->	
+	<message id="xmlEditor" lang="en">XML document editor</message>
+	<message id="xmlEditor" lang="fr">Editeur de documents XML</message>
+	<message id="addNode" lang="en">Add node</message>
+	<message id="addNode" lang="fr">Ajouter un élément</message>
+	<message id="nodeName" lang="en">Node name</message>
+	<message id="nodeName" lang="fr">Nom</message>
+	<message id="nodePosition" lang="en">Node position</message>
+	<message id="nodePosition" lang="fr">Position</message>
+	<message id="beforeCurrentNode" lang="en">Before current node</message>
+	<message id="beforeCurrentNode" lang="fr">Avant l'élément courant</message>
+	<message id="afterCurrentNode" lang="en">After current node</message>
+	<message id="afterCurrentNode" lang="fr">Après l'élément courant</message>
+	<message id="intoCurrentNode" lang="en">Into current node</message>
+	<message id="intoCurrentNode" lang="fr">Dans l'élément courant</message>
+	<message id="removeNode" lang="en">Remove node</message>
+	<message id="removeNode" lang="fr">Supprimer cet élément</message>
+	<message id="removeNodeConfirm" lang="en">Are you sure you want to remove this node ?</message>
+	<message id="removeNodeConfirm" lang="fr">Etes-vous sûr de vouloir supprimer cet élément ?</message>
+	<message id="foldUnfold" lang="en">Fold/Unfold</message>
+	<message id="foldUnfold" lang="fr">Replier/déplier</message>
+	<message id="foldUnfoldAll" lang="en">Fold/Unfold All</message>
+	<message id="foldUnfoldAll" lang="fr">Tout replier/déplier</message>
+	<message id="languageFilter" lang="en">Language filter</message>
+	<message id="languageFilter" lang="fr">Filtrer les langues</message>
+	<message id="xmlFileError" lang="en">This file is not a valid XML document. Try to open it with the text editor.</message>
+	<message id="xmlFileError" lang="fr">Ce fichier n'est pas un document XML. Essayez de l'ouvrir avec l'éditeur texte.</message>
+	<message id="schemaFileError" lang="en">This XML document is linked to an invalid schema. You should fix this using the text editor.</message>
+	<message id="schemaFileError" lang="fr">Ce document XML est relié à un schéma invalide. Vous devriez corriger ce problème avec l'éditeur texte.</message>
+	<message id="edit" lang="en">Edit</message>	
+	<message id="edit" lang="fr">Editer</message>	
+</messages>

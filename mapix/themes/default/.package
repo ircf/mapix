@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="default-theme"
+	install="themes"
+	version="1.0.0">
+	<name lang="en">Default theme</name>
+	<description lang="en">
+		This package contains a basic HTML page controller and view.
+	</description>
+	<name lang="fr">Thème par défaut</name>
+	<description lang="fr">
+		Ce paquet contient un contrôleur et une vue de pages HTML basique.
+	</description>
+	<dependency package="core" version="1.0.0"/>
+</package>

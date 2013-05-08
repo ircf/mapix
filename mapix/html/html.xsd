@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!-- Simplified XHTML XML Schema -->
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/schema.xsd">
+	<!-- Content attributes -->
+	<xsd:attribute name="lang" type="xsd:string"/>
+	<xsd:attribute name="http-equiv" type="xsd:string"/>
+	<xsd:attribute name="name" type="xsd:string"/>
+	<xsd:attribute name="content" type="xsd:string"/>
+	<!-- Content elements -->
+	<xsd:element name="title" minOccurs="1" maxOccurs="1" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The title of this content will be used as the title of the page and displayed as a header in the page.
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Le titre de ce contenu servira de titre à la page et sera affiché en gros titre dans la page.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="lang"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="meta" minOccurs="0" maxOccurs="*" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Meta tags will be used by search engines to index this document.
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Les balises méta servent à mieux référencer ce document dans les moteurs de recherche.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="lang"/>
+			<xsd:attribute ref="http-equiv"/>
+			<xsd:attribute ref="name"/>
+			<xsd:attribute ref="content"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="head" minOccurs="1" maxOccurs="1">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				XHTML head
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Entête XHTML
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="meta"/>
+				<xsd:element ref="title"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="body" minOccurs="1" maxOccurs="1" type="xsd:mixed">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The text of this content. This can be a simple (plain text) or a mixed string (text with a XHTML layout).
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Le texte de ce contenu. Il peut s'agir d'un texte brut (bloc-notes) ou avec mise en page (XHTML).
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="html">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A simple XHTML document with a title, metas informations and a plain or XHTML text.
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Document XHTML simple avec un titre, des métas informations et du texte brut ou avec mise en forme.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="lang"/>
+			<xsd:sequence>
+				<xsd:element ref="head"/>
+				<xsd:element ref="body"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

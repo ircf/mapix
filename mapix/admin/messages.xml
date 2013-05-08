@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- Global messages displayed in the back office -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<message id="admin" lang="en">Administration site</message>
+	<message id="admin" lang="fr">Site d'administration</message>
+	<message id="core" lang="en">Core</message>
+	<message id="core" lang="fr">Noyau</message>
+	<message id="version" lang="en">Version</message>
+	<message id="version" lang="fr">Version</message>
+	<message id="noscript" lang="en">Config Error : Mapix CMS back office requires a Javascript enabled browser.</message>
+	<message id="noscript" lang="fr">Erreur de configuration : Le site d'administration de Mapix CMS nécéssite un navigateur web avec la fonction Javascript activée.</message>
+	<message id="location" lang="en">Location</message>
+	<message id="location" lang="fr">Emplacement</message>
+	<message id="backupBeforeModify" lang="en">Backup this file before modifying</message>
+	<message id="backupBeforeModify" lang="fr">Sauvegarder ce fichier avant d'enregistrer</message>
+	<message id="cancel" lang="en">Cancel</message>
+	<message id="cancel" lang="fr">Annuler</message>
+	<message id="submit" lang="en">Submit</message>
+	<message id="submit" lang="fr">Envoyer</message>
+	<message id="user" lang="en">User</message>
+	<message id="user" lang="fr">Utilisateur</message>
+	<message id="group" lang="en">Group</message>
+	<message id="group" lang="fr">Groupe</message>
+	<message id="refresh" lang="en">Refresh</message>
+	<message id="refresh" lang="fr">Actualiser</message>
+	<message id="action" lang="en">Action</message>
+	<message id="action" lang="fr">Action</message>
+	<message id="userError" lang="en">User must be identified to access this service.</message>
+	<message id="userError" lang="fr">Vous devez être identifié pour accéder à ce service.</message>
+	<message id="file" lang="en">File </message>
+	<message id="file" lang="fr">Le fichier </message>
+	<message id="backedUpAndModified" lang="en">backed up and modified</message>
+	<message id="backedUpAndModified" lang="fr">sauvegardé et modifié</message>	
+	<message id="modified" lang="en">modified</message>
+	<message id="modified" lang="fr">modifié</message>
+	<message id="wasSuccessfully" lang="en"> was successfully </message>
+	<message id="wasSuccessfully" lang="fr"> a été </message>
+	<message id="couldNotBe" lang="en"> could not be </message>
+	<message id="couldNotBe" lang="fr"> n'a pas pu être </message>
+	<message id="lockError" lang="en">This file is locked, you can't modify it.</message>
+	<message id="lockError" lang="fr">Ce fichier est verrouillé, vous ne pouvez pas le modifier.</message>
+	<message id="locked" lang="en">locked</message>
+	<message id="locked" lang="fr">verrouillé</message>
+	<message id="unlocked" lang="en">unlocked</message>
+	<message id="unlocked" lang="fr">déverrouillé</message>
+	<message id="emptyFileError" lang="en">No file is opened in this editor. Go back to the folder editor and select a file to edit.</message>
+	<message id="emptyFileError" lang="fr">Aucun fichier n'est ouvert dans cet éditeur. Retournez à l'explorateur pour sélectionner un fichier à éditer.</message>
+	<message id="close" lang="en">Close</message>
+	<message id="close" lang="fr">Fermer</message>
+	<message id="save" lang="en">Modify</message>
+	<message id="save" lang="fr">Enregistrer</message>
+	<message id="saveAndClose" lang="en">Modify and close</message>
+	<message id="saveAndClose" lang="fr">Enregistrer et fermer</message>
+</messages>

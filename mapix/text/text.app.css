@@ -1,0 +1,12 @@
+/**
+* Mapix text editor application stylesheet
+* @author IRCF
+*/
+
+.text .document form{
+	height:95%;
+}
+.text .document form textarea{
+	width:99%;
+	height:100%;
+}

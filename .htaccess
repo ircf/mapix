@@ -1,0 +1,16 @@
+# Mapix rewrite rules
+#DirectoryIndex mapix/core/xrt.php
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	#RewriteCond %{REQUEST_FILENAME} !-f
+	#RewriteCond %{REQUEST_FILENAME} !-d
+	#RewriteCond %{REQUEST_URI} !^/mapix/
+	#RewriteRule ^(.*)$ mapix/$1 [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	#RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ mapix/core/xrt.php [L]
+</IfModule>
+
+# TODO Mapix application handler
+#Action application/mapix "./mapix/core/xrt.php"
+#SetHandler application/mapix

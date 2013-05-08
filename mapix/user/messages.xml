@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- Global messages displayed in the back office -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<!-- Login -->	
+	<message id="loginTitle" lang="en">Please login to access the administration service</message>
+	<message id="loginTitle" lang="fr">Identifiez-vous pour accéder au site d'administration</message>
+	<message id="loginText" lang="en">This service is restricted to identified users. You can use one of the following user accounts : (admin,demo) , (editor,demo) or (designer,demo).</message>
+	<message id="loginText" lang="fr">Ce service est réservé aux utilisateurs identifiés. Vous pouvez utiliser un des comptes utilisateurs suivants : (admin,demo) , (editor,demo) ou (designer,demo).</message>	
+	<message id="login" lang="en">Login</message>
+	<message id="login" lang="fr">Utilisateur</message>
+	<message id="password" lang="en">Password</message>
+	<message id="password" lang="fr">Mot de passe</message>
+	<message id="loginSubmit" lang="en">Login</message>
+	<message id="loginSubmit" lang="fr">Connexion</message>
+	<message id="loginFailed" lang="en">Sorry, login and/or password are invalid.</message>
+	<message id="loginFailed" lang="fr">Désolé, le nom d'utilisateur et/ou le mot de passe que vous avez saisi est invalide.</message>
+	<message id="logout" lang="en">Logout</message>
+	<message id="logout" lang="fr">Déconnexion</message>
+	<!-- OpenID Login -->
+	<message id="openIdTitle" lang="en">Login using your OpenID account</message>
+	<message id="openIdTitle" lang="fr">Identifiez-vous avec OpenID</message>
+	<message id="openIdText" lang="en">If you have a Mapix user account related to an OpenID account, you can use it to login. You can use (demo.mapixcms.myopenid.com,demo) to login the admin user account.</message>
+	<message id="openIdText" lang="fr">Si votre compte utilisateur Mapix est relié à un identifiant OpenID, vous pouvez l'utiliser pour vous connecter. Vous pouvez utiliser (demo.mapixcms.myopenid.com,demo) pour accéder au compte administrateur.</message>
+	<message id="openIdLogin" lang="en">OpenID Login</message>
+	<message id="openIdLogin" lang="fr">Identifiant OpenID</message>
+</messages>

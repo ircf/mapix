@@ -1,0 +1,9 @@
+/*
+	Internet Explorer CSS fix stylesheet for Mapix default theme
+*/
+
+/* Fix a minimum height for the middle div */
+#middle{ height:100px; }
+
+/* Fix a minimum width for the menu elements */
+.menu li{ width:100px; white-space:nowrap; }

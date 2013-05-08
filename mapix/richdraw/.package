@@ -1,0 +1,16 @@
+<!-- Mapix Calendar package descriptor -->
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="codepress"
+	version="1.0.0"
+	defaultInstall="/modules">
+	<name lang="en">Codepress</name>
+	<description lang="en">
+		Codepress is a highlight text editor.
+	</description>
+	<name lang="fr">Gadget calendrier</name>
+	<description lang="fr">
+		Codepress est un editeur texte en couleur.
+	</description>
+</package>

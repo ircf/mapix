@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="html"
+	version="1.0.0"
+	defaultInstall="mapix">
+	<name lang="en">HTML language support</name>
+	<description lang="en">
+		Provides HTML schema and templates to transform HTML files.
+	</description>
+	<name lang="fr">Support du langage HTML</name>
+	<description lang="fr">
+		Fourni un schéma du langage HTML et des gabarits pour manipuler des fichiers HTML.
+	</description>
+</package>

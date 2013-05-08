@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="sitemap"
+	version="1.0.0"
+	defaultInstall="/modules">
+	<name lang="en">Google sitemaps</name>
+	<description lang="en">
+		Generates Google sitemaps for Search Engine Optimization.
+	</description>
+	<name lang="fr">Plans de site Google</name>
+	<description lang="fr">
+		Permet de générer des plans de site Google pour mieux référencer vos sites internet.
+	</description>
+</package>

@@ -1,0 +1,33 @@
+/**
+* Internet Explorer fix stylesheet for Mapix admin default theme
+* @author IRCF
+*/
+
+/* Fix IE filters */
+.imgCrop_overlay { filter:alpha(opacity=50); }
+.imgCrop_clickArea { filter:alpha(opacity=01); }
+.imgCrop_handle { filter:alpha(opacity=50); }
+#folder #editor ul li.hidden{ filter:alpha(opacity=50); }
+
+/* Fix PNG transparency for icons */
+#folder #editor li a{ background-image: none; }
+#folder #editor li.folder a{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/folder.png);}
+#folder #editor li.text a,
+#folder #editor li.xml a{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/text.png);}
+#folder #editor li#cache a{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/cache.png);}
+#folder #editor li#content a{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/content.png);}
+#folder #editor li#css a{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/css.png);}
+#folder #editor li#images a{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/images.png);}
+#folder #editor li#js a{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/js.png);}
+#folder #editor li#schemas a{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/schemas.png);}
+#folder #editor li#services a{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/services.png);}
+#folder #editor li#templates a{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/admin/templates.png);}
+
+/* Fix mouse cursor over images thumbnails in the folder editor */
+#folder #editor li a img{ cursor:pointer; }
+
+/* Fix PNG transparency for Mapix logo */
+div#header h1{ background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src=/images/logo.png);}
+
+/* Fix context menu width */
+.contextMenu{ width:200px; }

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="users"
+	version="1.0.0"
+	defaultInstall="/modules">
+	<name lang="en">Users</name>
+	<description lang="en">
+		Handles user authentification and contains templates to display users informations.
+	</description>
+	<name lang="fr">Utilisateurs</name>
+	<description lang="fr">
+		Gère l'authentification des utilisateurs et contient des gabarits pour afficher des informations sur les utilisateurs.
+	</description>
+</package>

@@ -1,0 +1,16 @@
+<?xml version ="1.0"?>
+<package
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/package.xsd"
+	name="lightbox"
+	version="1.0.0"
+	defaultInstall="mapix">
+	<name lang="en">Lightbox</name>
+	<description lang="en">
+		Open single images or image lists in a lightbox.
+	</description>
+	<name lang="fr">Lightbox</name>
+	<description lang="fr">
+		Permet d'afficher une ou plusieurs images dans une lightbox.
+	</description>
+</package>

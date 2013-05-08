@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/html.xsd">
+	<head>
+		<title>Mapix Change log</title>
+		<meta name="description" content="This document describes tasks done between each version."/>
+		<meta name="keywords" content=""/>
+		<meta name="author" content="IRCF"/>
+	</head>
+	<body>
+		<p>
+			This document describes tasks done between each version.<br/>
+			Changes before version 0.4.4 is not documented.<br/>
+			Since version 0.9.3 Mapix documentation uses XML and will no longer be published in plain text.<br/>
+			Releases are available at sourceforge.net.
+		</p>
+		<h2><strong>[Release]</strong> Version 0.4.4</h2>
+		<ul>
+			<li>Added .htaccess directives to deny direct access to content, templates and services</li>
+			<li>Implemented a effective session protection for the back office (session_id is now passed between the client and services, through curl)</li>
+			<li>Added the header tag in mapix schema and Mapix::transformNode()</li>
+			<li>Rewrote the Mapix::loadTree() method using only Curl (instead of Curl for post / DOM for get or filesystem)</li>
+			<li>Replaced the "file" attribute by the "url" attribute for elements content and templates in the mapix schema and mapix class</li>
+			<li>Added the dynamic schema combo box in the folder editor in the "New file" dialog box</li>
+			<li>Changed the graphic design to a "more profesionnal" one</li>
+		</ul>
+		<h2><strong>[Release]</strong> Version 0.5.5</h2>
+		<ul>
+			<li>Folder editor now displays image thumbnails</li>
+			<li>Improved the file type detection in the folder service (folder, image, xml or text)</li>
+			<li>Implemented the image editor with resize, crop and rotate images, using prototype and scriptaculous</li>
+			<li>Folder editor now works with IE, image editor also works but image doesn't display on IE6 linux version (windows not tested)</li>
+			<li>Implemented the location rootline to ease the navigation in folders</li>
+		</ul>
+		<h2><strong>[Release]</strong> Version 0.6.5</h2>
+		<ul>
+			<li>Folder editor menu has been replaced with a contextual menu on right click (thanks to prototype and proto.menu)</li>
+			<li>Folders are draggable (thanks to prototype and scriptaculous)</li>
+			<li>Multiple asynchronous upload files (thanks to swfupload)</li>
+			<li>Write mode for XML editor is nearly complete (the add node function remains a litlle job to be available)</li>
+			<li>XML editor now displays correctly any document with or without a XML schema</li>
+		</ul>
+		<h2><strong>[Release]</strong> Version 0.7.4</h2>
+		<ul>
+			<li>Implemented the add node function in the XML editor</li>
+			<li>Debugged the writeCache method in the mapix core class</li>
+		</ul>
+		<h2><strong>[Release]</strong> Version 0.7.5</h2>
+		<ul>
+			<li>PHP4 syntax compatibility</li>
+			<li>Replaced TinyMce by NicEditor (reduced the release size by more than 2MB !)</li>
+			<li>Upgraded Prototype from 1.5.0 to 1.6.0.2</li>
+			<li>Upgraded Scriptaculous from 1.8.0 to 1.8.1</li>
+			<li>Fixed the script timeout bug in the XML editor by replacing the sortable tree function (works partially)</li>
+			<li>Fixed the send form service</li>
+			<li>Added several standard XML Schemas : stylesheet.xsd, xml.xsd, schema.xsd, xform.xsd, html.xsd ...</li>
+			<li>Bound every XML document as an instance of an XML Schema</li>
+			<li>Added a DOM API for PHP4 that replaces the DOM extension if not loaded (not tested)</li>
+			<li>Optimized annotation tooltips in the xml editor (reduce the generated HTML code)</li>
+		</ul>
+		<h2>Version 0.8.0</h2>
+		<ul>
+			<li>Removed constant dirs MAPIX_CONTENT,MAPIX_TEMPLATES and MAPIX_SERVICES : These files can now be located anywhere under the document root</li>
+			<li>Minor fixes in the XML Editor</li>
+			<li>Implemented  media gallery module (xml schema + template + xml file)</li>
+			<li>Added french documentation for all custom schemas (mapix, menu, content, users, messages and gallery)</li>
+			<li>Core : Implemented XML proper serialization/unserialization for input/output tags</li>
+			<li>Implemented multiple users and group login and permissions</li>
+			<li>Removed static contents from all templates and created messages XML documents to handle global content</li>
+			<li>Implemented localization (english/french)</li>
+			<li>Text Editor : Upgraded EditArea to 0.7.1.1</li>
+			<li>Implemented OpenId user login (not tested)</li>
+		</ul>
+		<h2><strong>[Release]</strong> Version 0.8.1</h2>
+		<ul>
+			<li>Core : Fixed XML Unserialize for namespaces attributes using simplexml API (DomDocument API bug)</li>
+			<li>XML Editor : Upgraded nicEdit to 0.9 beta</li>
+			<li>XML Editor : Implemented language filter</li>
+			<li>XML Editor : Implemented language select box for lang attributes</li>
+			<li>XMl Editor : Implemented calendar and date picker for date types</li>
+			<li>XML Editor : Implemented checkboxes for boolean types</li>
+			<li>XML Editor : Fixed Add/Remove nodes (generateFieldNames is now done onsubmit)</li>
+		</ul>
+		<h2>Version 0.8.2</h2>
+		<ul>
+			<li>Folder Editor : Toggle show/hide hidden files</li>
+			<li>Folder Editor : Extract archives, autoextract option on upload, delete archive after extract option</li>
+			<li>Command forms are now always centered in the screen</li>
+			<li>include folder renamed to .core, index.php moved to .core</li>
+		</ul>
+		<h2>Version 0.9.0</h2>
+		<ul>
+			<li>Core refundation : added the include tag, regexp page urls and global elements</li>
+			<li>Replaced /content/mapix.xml by /maps/*.map documents</li>
+			<li>Replaced mapix config constants by $GLOBALS["_MAPIX"] collection</li>
+		</ul>
+		<h2>Version 0.9.1</h2>
+		<ul>
+			<li>XML/Text/Image/SVG Editors : Implemented auto backup with file rotation</li>
+			<li>Folder Editor : Implemented Backup/restore files</li>
+			<li>Implemented SVG Editor</li>
+		</ul>
+		<h2>Version 0.9.2</h2>
+		<ul>
+			<li>Folder Editor : Fixed Backup/Restore bugs, added auto backup on restore</li>
+			<li>SVG Editor : Fixed selection bugs, added resize function</li>
+			<li>Folder Editor : Implemented Lock/unlock files</li>
+			<li>Folder Editor : Improved contextual menu to display/hide non relevant items</li>
+			<li>Editors : Implemented common a editor template</li>
+			<li>Removed literal messages from services, defined localized messages instead in admin_messages.xml</li>
+			<li>Text Editor : Implemented auto lock on open file</li>
+		</ul>
+		<h2><strong>[Release]</strong> Version 0.9.3</h2>
+		<ul>
+			<li>Reorganized files and folder of Mapix CMS to separate mapix core, admin, demo and common files (kind of "multisite oriented architecture")</li>
+			<li>Core : Implemented base url stack for include files and the index.map file</li>
+			<li>Implemented advanced cache : content and template can now be cached separately from pages</li>
+			<li>Package manager : Implemented update/install/uninstall/upgrades. common, demo, core, admin, doc and repository are now considered as packages</li>
+			<li>Text Editor : Upgraded EditArea to 0.7.2.3</li>
+			<li>XML Editor : Upgraded nicEdit to 0.9 r23</li>
+			<li>Doc package : Replaced plain text files by XML content documents</li>
+			<li>Gallery : Replaced gallery.js by lightbox.js</li>
+			<li>Folder Editor : Upgraded SWfUpload to 2.2.0 (prior versions didn't work with Flash Player 10)</li>
+			<li>Core : Added HTTPS support for absolute URL</li>
+		</ul>
+		<h2>Version 1.0.0</h2>
+		<ul>
+			<li>Admin : Created Mapix Javascript API to handle the whole back office interface (Panels, Tabs, Apps, Menus, Documents...)</li>
+			<li>Admin : Applications menus and documents are now loaded via ajax</li>
+			<li>Common : Replaced Prototype/Scriptaculous by Mootools</li>
+			<li>Common : Replaced EditArea by codepress</li>
+			<li>Common : Replaced nicEdit by MooEditable</li>
+			<li>Common : Replaced SwfUpload by FancyUpload</li>
+			<li>Core : Added REST layer for services</li>
+		</ul>
+	</body>
+</html>

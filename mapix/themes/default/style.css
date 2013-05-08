@@ -1,0 +1,177 @@
+/* Default theme main stylesheet */
+
+/* XHTML tags */
+body{
+	background-color:#fff;
+	text-align:center;
+	color:#333;
+	font-family:verdana,sans-serif;
+	font-size:12px;
+}
+h1{
+	font-size:16px;
+	color:#406c6d;
+}
+h2{
+	font-size:14px;
+	color:#406c6d;
+}
+form{
+	margin:0;
+}
+input,select,textarea{
+	border:1px solid #333;
+}
+a{
+	color:#333;
+}
+a img{
+	border:0;
+}
+
+/* Page elements */
+div#page{
+	width:900px;
+	margin:0 auto 0 auto;
+}
+div#header{
+	/*height:67px;*/
+	background:url(images/header.jpg) no-repeat;
+}
+div#header h1{
+	float:left;
+	width:120px;
+	height:42px;
+	background:url(images/logo.png) no-repeat;
+	margin:20px 20px 5px;
+	padding:0;
+}
+div#header h1 span{
+	display:none;
+}
+div#header p{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	margin:40px 0 0 40px;
+	padding:0;
+}
+div#content{
+	clear:both;
+	text-align:left;
+	padding:10px;
+}
+div#footer{
+	margin:0;
+	padding:10px 0;
+}
+
+/* Menu */
+ul.menu{
+	clear:both;
+	/*float:left;*/
+	width:100%;
+	margin:0;
+	padding:0;
+	height:32px;
+	background:#000 url(images/menu.gif) repeat-x 0 28px;
+}
+ul.menu li{
+	display:block;
+	float:left;
+	margin:5px 0 0 0;
+}
+ul.menu li a{
+	display:block;
+	padding:0 10px 0 10px;
+	text-decoration:none;
+	border-right:2px solid #fff;
+	color:#64bfc1;
+}
+ul.menu li a:hover{
+	color:#fff;
+}
+ul.menu li ul{
+	position:absolute;
+	display:none;
+	width:200px;
+	background:#000;
+	text-align:left;
+	padding:5px 0 0 0;
+	margin:0;
+}
+ul.menu li ul li{
+	float:none;
+}
+ul.menu li ul li a{
+	border-right:none;
+	padding:5px 10px 5px 10px;
+}
+ul.menu li:hover ul{
+	display:block;
+}
+
+/* Language selector */
+ul#lang{
+	list-style:none;
+	float:right;
+	margin:5px 0 0 0;
+	padding:0;
+}
+ul#lang li{
+	display:inline;
+}
+ul#lang li a{
+	margin:0 10px 0 0;
+	color:white;
+}
+
+/* News */
+.rss .item{
+	border-top:1px solid #333;
+}
+.rss .item .date{
+	float:right;
+	font-style:italic;
+}
+
+/* Messages */
+.message{
+	color:red;
+	font-weight:bold;
+}
+
+/* Forms */
+form fieldset{
+	border:none;
+}
+form fieldset p label{
+	clear:left;
+	display:block;
+	float:left;
+	width:160px;
+	font-weight:bold;
+}
+input.openid{
+	background:#fff url(images/openid.gif) no-repeat 0 50%;
+	padding-left: 18px;
+}
+
+/* Gallery */
+div#gallery ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+div#gallery ul li{
+	float:left;
+	width:260px;
+	margin:0 20px 20px 0;
+}
+div#gallery ul li img{
+	width:260px;
+}
+.separator{
+	clear:both;
+}

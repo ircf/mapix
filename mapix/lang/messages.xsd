@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- Mapix Messages schema definition -->
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/schema.xsd">
+	<!-- Messages attributes -->
+	<xsd:attribute name="id" type="xsd:string" use="required"/>
+	<xsd:attribute name="lang" type="xsd:string"/>
+	<!-- Messages elements -->
+	<xsd:element name="messages" minOccurs="1" maxOccurs="1" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This document root contains messages in several languages for the whole site
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Ce document contient des messages dans différentes langues pour l'ensemble du site
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="message"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="message" minOccurs="1" maxOccurs="unbounded" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A message is a sentence or a paragraph that can be used anywhere in the site,
+				messages are usually used to handle global content and to avoid using static content in templates or programs
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Un message est une phrase ou un paragraphe pouvant être utilisé n'importe où sur le site,
+				il est recommandé de les utiliser pour gérer les contenus globaux et pour éviter d'avoir à utiliser
+				du contenu en dur dans les gabarits (templates) ou programmes.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="id"/>
+			<xsd:attribute ref="lang"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

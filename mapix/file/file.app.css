@@ -1,0 +1,81 @@
+/**
+* Mapix file application stylesheet
+* @author IRCF
+*/
+
+/* Tree view */
+.tree .file{
+}
+
+/* Icons view */
+.icons .file{
+	position:relative!important;
+	opacity:1!important;
+	float:left;
+	width:80px;
+	background-repeat:no-repeat;
+	background-position:center 5px;
+	overflow:hidden;
+	border:1px solid transparent;
+	padding: 55px 5px 5px 5px;
+	margin: 5px;
+}
+.x-view-selector,
+.x-view-selected{
+	background: #eff5fb;
+	border:1px solid #99bbe8;
+}
+.icons .file.folder{
+	background-image:url(images/folder.png);
+}
+.icons .file.text{
+	background-image:url(images/text.png);
+}
+.icons .file.xml{
+	background-image:url(images/xml.png);
+}
+.icons .file.xml.svg{
+	background-image:url(images/svg.png);
+}
+.icons .file.binary{
+	background-image:url(images/download.png);
+}
+.icons .file.image{
+	/* TODO */
+}
+.icons .file#cache{
+	background-image:url(images/cache.png);
+}
+.icons .file#content{
+	background-image:url(images/content.png);
+}
+.icons .file#css{
+	background-image:url(images/css.png);
+}
+.icons .file#images{
+	background-image:url(images/images.png);
+}
+.icons .file#js{
+	background-image:url(images/js.png);
+}
+.icons .file#schemas{
+	background-image:url(images/schemas.png);
+}
+.icons .file#services{
+	background-image:url(images/services.png);
+}
+.icons .file#templates{
+	background-image:url(images/templates.png);
+}
+.icons .file span.name{
+	display:block;
+	text-align:center;
+}
+.icons .file span.locked{
+	position:absolute;
+	display:block;
+	width:20px;
+	height:20px;
+	background:url(images/lock.png) no-repeat;
+	margin:-20px 0 0 48px;
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!-- Folder application messages -->
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/messages.xsd">
+	<message id="folderEditor" lang="en">Folder editor</message>
+	<message id="folderEditor" lang="fr">Explorateur de fichiers</message>
+	<message id="fileName" lang="en">File name</message>
+	<message id="fileName" lang="fr">Nom du fichier</message>
+	<message id="fileSize" lang="en">File size</message>
+	<message id="fileSize" lang="fr">Taille du fichier</message>
+	<message id="fileType" lang="en">File type</message>
+	<message id="fileType" lang="fr">Type de fichier</message>
+	<message id="dateCreated" lang="en">Date created</message>
+	<message id="dateCreated" lang="fr">Date de création</message>
+	<message id="dateModified" lang="en">Date modified</message>
+	<message id="dateModified" lang="fr">Date de modification</message>
+	<message id="createFile" lang="en">Create a new file</message>
+	<message id="createFile" lang="fr">Nouveau fichier</message>
+	<message id="textFile" lang="en">Text file</message>
+	<message id="textFile" lang="fr">Fichier texte</message>
+	<message id="xmlDocument" lang="en">XML Document</message>
+	<message id="xmlDocument" lang="fr">Document XML</message>
+	<message id="folder" lang="en">Folder</message>
+	<message id="folder" lang="fr">Dossier</message>
+	<message id="xmlSchema" lang="en">XML Schema</message>
+	<message id="xmlSchema" lang="fr">Schema XML</message>
+	<message id="copyFile" lang="en">Copy file</message>
+	<message id="copyFile" lang="fr">Copier le fichier</message>
+	<message id="sourceFile" lang="en">Source file</message>
+	<message id="sourceFile" lang="fr">Fichier d'origine</message>
+	<message id="targetFolder" lang="en">Target folder</message>
+	<message id="targetFolder" lang="fr">Dossier de destination</message>
+	<message id="targetFile" lang="en">Target file</message>
+	<message id="targetFile" lang="fr">Fichier de destination</message>
+	<message id="moveFile" lang="en">Move file</message>
+	<message id="moveFile" lang="fr">Déplacer le fichier</message>
+	<message id="deleteFile" lang="en">Delete file</message>
+	<message id="deleteFile" lang="fr">Supprimer le fichier</message>
+	<message id="uploadFiles" lang="en">Upload files</message>
+	<message id="uploadFiles" lang="fr">Mettre des fichiers en ligne</message>
+	<message id="uploadFile" lang="en">Upload a file</message>
+	<message id="uploadFile" lang="fr">Mettre en ligne</message>
+	<message id="close" lang="en">Close</message>
+	<message id="close" lang="fr">Fermer</message>
+	<message id="toggleViewMode" lang="en">Toggle view mode</message>
+	<message id="toggleViewMode" lang="fr">Basculer affichage</message>
+	<message id="toggleHiddenFiles" lang="en">Toggle hidden files</message>
+	<message id="toggleHiddenFiles" lang="fr">Afficher/Cacher les fichiers cachés</message>
+	<message id="extractArchive" lang="en">Extract archive</message>
+	<message id="extractArchive" lang="fr">Extraire l'archive</message>
+	<message id="deleteArchive" lang="en">Delete archive after extracting</message>
+	<message id="deleteArchive" lang="fr">Supprimer l'archive après extraction</message>
+	<message id="lockUnlock" lang="en">Lock / Unlock file</message>
+	<message id="lockUnlock" lang="fr">Verrouiller / Déverrouiller</message>
+	<message id="lock" lang="en">Lock</message>
+	<message id="lock" lang="fr">Verrouiller</message>
+	<message id="unlock" lang="en">Unlock</message>
+	<message id="unlock" lang="fr">Déverrouiller</message>
+	<message id="backupRestore" lang="en">Back up / Restore</message>
+	<message id="backupRestore" lang="fr">Sauvegarder / Restaurer</message>
+	<message id="backup" lang="en">Back up</message>
+	<message id="backup" lang="fr">Sauvegarder</message>
+	<message id="restore" lang="en">Restore</message>
+	<message id="restore" lang="fr">Restaurer</message>
+	<message id="created" lang="en">created</message>
+	<message id="created" lang="fr">créé</message>
+	<message id="deleted" lang="en">deleted</message>
+	<message id="deleted" lang="fr">supprimé</message>
+	<message id="uploaded" lang="en">uploaded</message>
+	<message id="uploaded" lang="fr">mis en ligne</message>
+	<message id="moved" lang="en">moved</message>
+	<message id="moved" lang="fr">déplacé</message>
+	<message id="copied" lang="en">copied</message>
+	<message id="copied" lang="fr">copié</message>
+	<message id="backedUp" lang="en">backed up</message>
+	<message id="backedUp" lang="fr">sauvegardé</message>
+	<message id="restored" lang="en">restored</message>
+	<message id="restored" lang="fr">restauré</message>
+	<message id="extracted" lang="en">extracted</message>
+	<message id="extracted" lang="fr">extrait</message>
+	<message id="folderError" lang="en">This file is not a folder. Try to open it with a different editor.</message>
+	<message id="folderError" lang="fr">Ce fichier n'est pas un dossier. Essayez de l'ouvrir avec un autre éditeur.</message>
+	<message id="displaySubcontent" lang="en">Display Subcontent</message>
+	<message id="displaySubcontent" lang="fr">Afficher sous-menu</message>
+	<message id="browseFiles" lang="en">Browse Files</message>
+	<message id="browseFiles" lang="fr">Parcourir les fichiers</message>
+	<message id="clearList" lang="en">Clear List</message>
+	<message id="clearList" lang="fr">Effacer la liste</message>
+	<message id="startUpload" lang="en">Start Upload</message>
+	<message id="startUpload" lang="fr">Commencer le téléchargement</message>
+	<message id="overallProgress" lang="en">Overall Progress</message>
+	<message id="overallProgress" lang="fr">Progression globale</message>
+	<message id="fileProgress" lang="en">File Progress</message>
+	<message id="fileProgress" lang="fr">Progression d'un fichier</message>
+</messages>

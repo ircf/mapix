@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/html.xsd">
+	<head>
+		<title>Installation instructions for Mapix</title>
+		<meta name="description" content="This document describes how to install Mapix CMS on your server."/>
+		<meta name="keywords" content="install,mapix cms,installation,config,configuration"/>
+		<meta name="author" content="IRCF"/>
+	</head>
+	<body>
+		<h2>Pre-requisites</h2>
+		<p>Mapix requires the following configuration :</p>
+		<ul>
+			<li>Apache with .htaccess (mod_rewrite) enabled.</li>
+			<li>PHP 5.2+ with DOM, XSL and CURL extensions</li>
+			<li>PHP should NOT be run in Safe Mode (check your php.ini)</li>
+			<li>The convert program is required by the images editor (resize, crop, rotate)</li>
+		</ul>
+		<p>Any other recommendation or security issue concerning mapix installation is welcome, please email me at gpl@ircf.fr or use mapix tracker at sourceforge.</p>
+		<h2>Installation</h2>
+		<ol>
+			<li>
+				<p>Download and untar the Mapix tarball in your webroot directory :</p>
+				<pre>
+					cd /path/to/webroot
+					wget http://gpl.ircf.fr/mapix-version.tar.gz
+					tar -zxvf mapix-version.tar.gz
+				</pre>
+			</li>
+			<li>
+				<p>Chown and chmod your webroot directory for your apache user to have read and write access :</p>
+				<pre>
+					chown -R . apache.apache
+					chmod -R 755 /path/to/webroot
+				</pre>
+			</li>
+			<li>
+				<p>Go to your httpd.conf and set the following parameters in the Directory tag, then restart Apache :</p>
+				<pre>
+					AllowOverride All
+					php_admin_value open_basedir /path/to/webroot:/tmp 
+				</pre>
+			</li>
+			<li>
+				<p>Customize the .htaccess to allow only your web host to access xsl and php services :</p>
+				<p>
+					uncomment the last part of the .htaccess file and replace localhost with your domain name
+					(it seems that localhost doesn't work except when your site is called with http://localhost)
+				</p>
+			</li>
+			<li>
+				<p>Launch the welcome page on your favourite browser :</p>
+				<pre>
+					lynx http://yourserver/
+				</pre>
+			</li>
+		</ol>
+		<h2>Overview of Mapix default files and directories</h2>
+		<p>Mapix CMS default site contains those files and directories :</p>
+		<table>
+			<tbody>
+				<tr><th>.htaccess</th><td>This file is part of Mapix core package. It rewrites all URL that don't match an existing file to the .core/index.php program</td></tr>
+				<tr><th>.core/</th><td>Mapix core package : main program, config file and core utilities</td></tr>
+				<tr><th>common/</th><td>Mapix common package : templates and services shared by all sites, included the admin site</td></tr>
+				<tr><th>admin/</th><td>Mapix back office package (optional)</td></tr>
+				<tr><th>doc/</th><td>Mapix documentation package : a set of XML documents (like this one) to help you installing and getting started using Mapix CMS</td></tr>
+				<tr><th>demo/</th><td>Mapix demo package : a sample site with a simple map and a set of XML documents to help you beginning a new site</td></tr>
+				<tr><th>index.map</th><td>The main site map for the document root. This map usually loads a submap for each site or domain name handled by Mapix CMS.</td></tr>
+			</tbody>
+		</table>
+		<p>
+			Feel free to complete or to modify this organization to fit your needs,<br/>
+			but don't forget to check the .core/config.php file once you've done.
+		</p>
+		<h2>Notice concerning PHP services</h2>
+		<p>
+			Mapix aims to separate content from layout.
+			PHP programs (services) are considered as dynamic content providers.
+			PHP services should only be used to execute programs or system commands and should return (echo)
+			a clean XML result with variables to display or use in XSL templates.
+			Try not to use hardcoded HTML in PHP services.
+			It is possible to use standalone PHP pages in your mapix site, but it isn't recommended.
+		</p>
+	</body>
+</html>

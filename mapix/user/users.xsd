@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!-- Mapix Users schema definition -->
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://mapixcms.org/schemas/schema.xsd">
+	<!-- Users attributes -->
+	<xsd:attribute name="name" type="xsd:string" use="required"/>
+	<xsd:attribute name="password" type="xsd:string" use="required"/>
+	<xsd:attribute name="openid" type="xsd:string"/>
+	<xsd:attribute name="url" type="xsd:string" use="required"/>
+	<xsd:attribute name="read" type="xsd:boolean" default="false"/>
+	<xsd:attribute name="write" type="xsd:boolean" default="false"/>
+	<!-- Users elements -->
+	<xsd:element name="users" minOccurs="1" maxOccurs="1">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The document root for mapix users, contains only groups
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Les utilisateurs de mapix, cet élément ne peut contenir que des groupes
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="group"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="group" minOccurs="1" maxOccurs="unbounded">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A user group containing users and permissions on different resources (files or URL)
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Un groupe d'utilisateurs contient des utilisateurs et des permissions sur des ressources de type fichier ou URL
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="name"/>
+			<xsd:sequence>
+				<xsd:element ref="user"/>
+				<xsd:element ref="permission"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="user" minOccurs="1" maxOccurs="unbounded">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A user account must be classified in a group a can define users specific permissions
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Un utilisateur doit obligatoirement être rangé dans un groupe et peut avoir des permissions sur des ressources spécifiques
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="name"/>
+			<xsd:attribute ref="password"/>
+			<xsd:attribute ref="openid"/>
+			<xsd:sequence>
+				<xsd:element ref="permission"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="permission" minOccurs="0" maxOccurs="unbounded">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A permission defines read/write permissions on a resource (file or URI) for a user or a group
+			</xsd:documentation>
+			<xsd:documentation xml:lang="fr">
+				Une permission permet de définir les accès en lecture/écriture
+				à une ressource spécifique (de type fichier ou URL) pour un utilisateur ou un groupe
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute ref="url"/>
+			<xsd:attribute ref="read"/>
+			<xsd:attribute ref="write"/>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
