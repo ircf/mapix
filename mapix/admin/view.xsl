@@ -25,8 +25,8 @@
 				<title><xsl:value-of select="lang:__('admin',$messages)"/></title>
 				<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 				<link rel="shortcut icon" href="images/favicon.ico"/>
-				<script type="text/javascript" src="../ext/ext-debug.js"></script>
-				<link rel="stylesheet" type="text/css" href="../ext/resources/css/ext-all.css"/>
+        <link href="http://cdn.sencha.com/ext/gpl/4.2.0/resources/css/ext-all.css" rel="stylesheet" />
+        <script src="http://cdn.sencha.com/ext/gpl/4.2.0/ext-all.js"></script>
 				<link rel="stylesheet" type="text/css" href="style.css"/>
 				<xsl:comment><![CDATA[ [if IE]><link rel="stylesheet" type="text/css" href="iefix.css"/><![endif] ]]></xsl:comment>
 				<script type="text/javascript" src="script.js"></script>
