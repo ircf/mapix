@@ -4,8 +4,8 @@
 	xmlns:http="exslt://mapix/core/http">
 	<xsl:output omit-xml-declaration="yes" indent="no"/>
 
-	<!-- Load theme controller -->
-	<xsl:include href="mapix/themes/default/controller.xsl"/>
+	<!-- Load page controller -->
+	<xsl:include href="mapix/page/controller.xsl"/>
 
 	<!-- Main controller -->
 	<xsl:template match="http:request">

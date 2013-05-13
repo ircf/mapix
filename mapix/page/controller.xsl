@@ -6,11 +6,11 @@
 	xmlns:file="exslt://mapix/file/file"
 	xmlns:lang="exslt://mapix/lang"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="../../xml/stylesheet.xsd">
+	xsi:noNamespaceSchemaLocation="../xml/stylesheet.xsd">
 
 	<!-- Functions and templates -->
 	<xsl:include href="exslt://mapix/file/file"/>
-	<xsl:include href="../../lang/view.xsl"/>
+	<xsl:include href="../lang/view.xsl"/>
 	<xsl:include href="view.xsl"/>
 
 	<!-- Main controller -->
@@ -26,9 +26,9 @@
 		</xsl:variable>
 		<xsl:if test="$content=concat($lang,'/404.html')"><http:header>HTTP/1.0 404 Not Found</http:header></xsl:if>
 		<xsl:call-template name="page-view">
-			<xsl:with-param name="menu" select="document(concat('../../../',$site,'/',$lang,'/menu.html'))"/>
-			<xsl:with-param name="messages" select="document(concat('../../../',$site,'/',$lang,'/messages.xml'))"/>
-			<xsl:with-param name="content" select="document(concat('../../../',$site,'/',$content))"/>
+			<xsl:with-param name="menu" select="document(concat('../../',$site,'/',$lang,'/menu.html'))"/>
+			<xsl:with-param name="messages" select="document(concat('../../',$site,'/',$lang,'/messages.xml'))"/>
+			<xsl:with-param name="content" select="document(concat('../../',$site,'/',$content))"/>
 		</xsl:call-template>
 		<!-- TODO Rewrite links (href/src) before output -->
 	</xsl:template>
