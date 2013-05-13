@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- This file defines templates for localization -->
+<!-- This file defines functions for localization -->
 <xsl:stylesheet version="1.0"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -9,46 +9,8 @@
 	xmlns:func="http://exslt.org/functions"
 	xsi:noNamespaceSchemaLocation="../../xml/stylesheet.xsd"
 	extension-element-prefixes="lang func">
-	<xsl:output
-		method="xml"
-		indent="no"
-		encoding="utf-8" />
-	<!-- Load model -->
-	<xsl:include href="model.xsl"/>
-	<!-- Template to display the language menu -->
-	<xsl:template name="lang:menu">
-		<xsl:param name="lang" select="lang:detect()"/>
-		<xsl:param name="page" select="''"/>
-		<ul id="lang">
-			<xsl:for-each select="$languages[@lang=$languages[1]/@lang and $lang='']|$languages[@lang=$lang and $lang!='']">
-				<li><a href="/{@id}/{$page}" title="{.}">
-					<xsl:value-of select="."/>
-				</a></li>
-			</xsl:for-each>
-		</ul>
-	</xsl:template>
-	<!-- Template to display a language select box -->
-	<xsl:template name="lang:select">
-		<xsl:param name="id"/>
-		<xsl:param name="name"/>
-		<xsl:param name="value"/>
-		<xsl:param name="lang" select="lang:detect()"/>
-		<xsl:element name="select">
-			<xsl:if test="$id"><xsl:attribute name="id" select="$id"/></xsl:if>
-			<xsl:if test="$name"><xsl:attribute name="name" select="$name"/></xsl:if>
-			<xsl:attribute name="class">lang</xsl:attribute>
-			<option value=""></option>
-			<xsl:for-each select="$languages[@lang=$languages[1]/@lang and $lang='']|$languages[@lang=$lang and $lang!='']">
-				<xsl:element name="option">
-					<xsl:attribute name="value"><xsl:value-of select="@id"/></xsl:attribute>
-					<xsl:if test="@id = $value">
-						<xsl:attribute name="selected">true</xsl:attribute>
-					</xsl:if>
-					<xsl:value-of select="."/>
-				</xsl:element>
-			</xsl:for-each>
-		</xsl:element>
-	</xsl:template>
+	<!-- Read the language XML file -->
+	<xsl:variable name="languages" select="document('languages.xml')/messages/message"/>
 	<!-- Function to get the localized content from an element (if exists) -->
 	<func:function name="lang:__">
 		<xsl:param name="id"/>
